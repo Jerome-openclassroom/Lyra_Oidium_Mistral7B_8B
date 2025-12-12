@@ -1,3 +1,12 @@
+<img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" width="100px" height="auto" />
+
+![Mistral](https://img.shields.io/badge/Model-Mistral%207B-blue)
+![LoRA](https://img.shields.io/badge/Fine--Tuning-LoRA-green)
+![SFT](https://img.shields.io/badge/Training-SFT-orange)
+![Agronomy](https://img.shields.io/badge/Domain-Agronomy%20%2F%20Viticulture-darkgreen)
+![HuggingFace](https://img.shields.io/badge/Platform-Hugging%20Face-yellow)
+![License](https://img.shields.io/badge/License-Apache%202.0-lightgrey)
+
 # Powdery Mildew (Oidium) Risk Prediction Model – Grapevine (Mistral 7B / 8B)
 
 ## Project overview
@@ -144,6 +153,10 @@ This project shows that **model framing and dataset design** are more decisive t
 ⚠️ This model is an **assistive decision-support tool** and does not replace local human expertise.
 
 ---
+
+The fine-tuned model is publicly available on Hugging Face:
+
+👉 **https://huggingface.co/jeromex1/lyra_Oidium_mistral7B_LoRA**
 
 ## License and status
 
