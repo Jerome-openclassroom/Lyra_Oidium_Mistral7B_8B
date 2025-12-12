@@ -1,0 +1,125 @@
+Voici une série de prompt utilisateur testés dans le playground de Mistral
+3 modèle ont été testé sur une série de 4 prompts, avec prompt système.
+La mention user est suivie du prompt système
+La mention assistant est suivie dela réponse du modèle.
+
+Les prompts 'user' sont identiques et répétés dans chaque série d'exemple 
+
+Hyperparamètres : Temp = 0.7 et Top_p = 1.
+
+#test Mistral 7B avec 4 prompts (respectivement : risques faible, moyen, élevé, cas ambiguë:
+
+user
+Je suis un viticulteur dans le Bordelais. Voici les conditions actuelles dans mon vignoble : - Stade phénologique : les baies sont en phase de maturité (stade non critique). - Humidité relative moyenne sur les dernières 24h : 60%. - Température moyenne sur les dernières 24h : 28°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : faible (seulement une année sur cinq avec des symptômes légers). - Évapotranspiration potentielle (ETP) : 5 mm/jour.  Quel est le niveau de risque d'infection par l'oïdium dans ces conditions, et quelle recommandation agronomique me donnerais-tu ?
+
+
+assistant
+Risque : moyen
+Recommandation : Surveiller les jeunes feuilles. Appliquer un traitement préventif à base de soufre si l’humidité relative nocturne dépasse 80% pendant plus de 6 heures.
+
+
+user
+Je cultive du Chardonnay en Bourgogne. Voici les données de mon parcellaire aujourd'hui : - Stade phénologique : jeunes feuilles (stade BBCH 12–17). - Humidité relative moyenne sur les dernières 24h : 75%. - Température moyenne sur les dernières 24h : 22°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : modéré (deux années sur cinq avec des symptômes). - Évapotranspiration potentielle (ETP) : 3 mm/jour.  Évalue le risque d'oïdium pour mes jeunes feuilles et propose-moi une action concrète.
+
+
+assistant
+Risque : moyen
+Recommandation : Surveiller les jeunes feuilles. Appliquer un traitement préventif à base de soufre si l’humidité relative nocturne dépasse 80% pendant plus de 6 heures.
+
+
+user
+Je suis en train de surveiller mes vignes de Merlot dans le Languedoc. Voici les conditions actuelles : - Stade phénologique : floraison (stade BBCH 61–69). - Humidité relative moyenne sur les dernières 24h : 85%. - Température moyenne sur les dernières 24h : 23°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : élevé (quatre années sur cinq avec des symptômes marqués). - Évapotranspiration potentielle (ETP) : 2 mm/jour.  Quel est le risque d'infection par l'oïdium dans ces conditions, et que devrais-je faire pour protéger mes vignes ?
+
+
+assistant
+Risque : élevé
+Recommandation : Traiter immédiatement avec un fongicide systémique. Cibler les inflorescences et renouveler le traitement après 7 à 10 jours si les conditions favorables persistent.
+
+
+user
+Je suis viticulteur dans la Vallée du Rhône. Voici les données de ma parcelle ce matin : - Stade phénologique : floraison (stade critique). - Humidité relative moyenne sur les dernières 24h : 85%. - Température moyenne sur les dernières 24h : 23°C. - Il a plu dans les dernières 24h (une averse de 10 mm). - Historique d'infection par l'oïdium : élevé (infections fréquentes les années précédentes). - Évapotranspiration potentielle (ETP) : 5 mm/jour (jour ensoleillé et venteux après la pluie).  Évalue le risque d'oïdium pour mes vignes en floraison et donne-moi une recommandation précise, en tenant compte de l'effet de la pluie récente et de l'ETP élevée.
+
+
+assistant
+Risque : élevé
+Recommandation : Traiter immédiatement avec un fongicide systémique. Cibler les inflorescences et renouveler le traitement après 7 à 10 jours si les conditions favorables persistent.
+
+# test Mistral 8B avec 4 prompts (respectivement : risques faible, moyen, élevé, cas ambiguë:
+
+user
+Je suis un viticulteur dans le Bordelais. Voici les conditions actuelles dans mon vignoble : - Stade phénologique : les baies sont en phase de maturité (stade non critique). - Humidité relative moyenne sur les dernières 24h : 60%. - Température moyenne sur les dernières 24h : 28°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : faible (seulement une année sur cinq avec des symptômes légers). - Évapotranspiration potentielle (ETP) : 5 mm/jour.  Quel est le niveau de risque d'infection par l'oïdium dans ces conditions, et quelle recommandation agronomique me donnerais-tu ?
+
+
+assistant
+Risque : faible
+Recommandation : Aucune action spécifique requise. Concentrez-vous sur la surveillance visuelle des feuilles et baies, mais le risque oïdium est négligeable à ce stade. Priorisez la gestion de la vigueur végétative et l’aération des rangs pour limiter d’éventuels stress futurs.
+
+
+user
+Je cultive du Chardonnay en Bourgogne. Voici les données de mon parcellaire aujourd'hui : - Stade phénologique : jeunes feuilles (stade BBCH 12–17). - Humidité relative moyenne sur les dernières 24h : 75%. - Température moyenne sur les dernières 24h : 22°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : modéré (deux années sur cinq avec des symptômes). - Évapotranspiration potentielle (ETP) : 3 mm/jour.  Évalue le risque d'oïdium pour mes jeunes feuilles et propose-moi une action concrète.
+
+
+assistant
+Risque : moyen
+Recommandation : Appliquer un traitement préventif à base de soufre en pulvérisation fine au coucher du soleil pour protéger les jeunes feuilles. Renouveler le traitement si l’humidité relative dépasse 80% pendant plus de 6 heures dans les 7 prochains jours.
+
+
+user
+Je suis en train de surveiller mes vignes de Merlot dans le Languedoc. Voici les conditions actuelles : - Stade phénologique : floraison (stade BBCH 61–69). - Humidité relative moyenne sur les dernières 24h : 85%. - Température moyenne sur les dernières 24h : 23°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : élevé (quatre années sur cinq avec des symptômes marqués). - Évapotranspiration potentielle (ETP) : 2 mm/jour.  Quel est le risque d'infection par l'oïdium dans ces conditions, et que devrais-je faire pour protéger mes vignes ?
+
+
+assistant
+Risque : élevé
+Recommandation : Traiter immédiatement avec un fongicide systémique (ex. : azoxystrobine + cyazofamid) ciblant les inflorescences. Renouveler le traitement après 7 jours si l’humidité relative reste ≥80% et les températures oscillent entre 20–25°C. Éviter les applications en plein soleil pour limiter les phytotoxicités.
+
+
+user
+Je suis viticulteur dans la Vallée du Rhône. Voici les données de ma parcelle ce matin : - Stade phénologique : floraison (stade critique). - Humidité relative moyenne sur les dernières 24h : 85%. - Température moyenne sur les dernières 24h : 23°C. - Il a plu dans les dernières 24h (une averse de 10 mm). - Historique d'infection par l'oïdium : élevé (infections fréquentes les années précédentes). - Évapotranspiration potentielle (ETP) : 5 mm/jour (jour ensoleillé et venteux après la pluie).  Évalue le risque d'oïdium pour mes vignes en floraison et donne-moi une recommandation précise, en tenant compte de l'effet de la pluie récente et de l'ETP élevée.
+
+
+assistant
+Risque : élevé
+Recommandation : Traiter en urgence avec un mélange soufre + fongicide à large spectre (ex. : pénflufené + cyazofamid) pour couvrir les inflorescences. La pluie récente a favorisé la germination des conidies, et l’ETP élevée limite l’humidité résiduelle, mais le risque persiste si les conditions reviennent rapidement à ≥80% d’humidité relative. Vérifier la couverture foliaire après traitement.
+
+# test Mistral 14B avec 4 prompts (respectivement : risques faible, moyen, élevé, cas ambiguë:
+
+user
+Je suis un viticulteur dans le Bordelais. Voici les conditions actuelles dans mon vignoble : - Stade phénologique : les baies sont en phase de maturité (stade non critique). - Humidité relative moyenne sur les dernières 24h : 60%. - Température moyenne sur les dernières 24h : 28°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : faible (seulement une année sur cinq avec des symptômes légers). - Évapotranspiration potentielle (ETP) : 5 mm/jour.  Quel est le niveau de risque d'infection par l'oïdium dans ces conditions, et quelle recommandation agronomique me donnerais-tu ?
+
+
+
+assistant
+Risque : faible
+Recommandation : Aucune action requise. Conditions défavorables à l’infection par l’oïdium en phase de maturité.
+
+
+
+user
+Je cultive du Chardonnay en Bourgogne. Voici les données de mon parcellaire aujourd'hui : - Stade phénologique : jeunes feuilles (stade BBCH 12–17). - Humidité relative moyenne sur les dernières 24h : 75%. - Température moyenne sur les dernières 24h : 22°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : modéré (deux années sur cinq avec des symptômes). - Évapotranspiration potentielle (ETP) : 3 mm/jour.  Évalue le risque d'oïdium pour mes jeunes feuilles et propose-moi une action concrète.
+
+
+
+
+
+assistant
+Risque : moyen
+Recommandation : Surveiller activement les jeunes feuilles et appliquer une bouillie bordelaise ou du soufre en prévention si l’humidité relative nocturne dépasse 80% pendant plusieurs heures consécutives.
+
+
+user
+Je suis en train de surveiller mes vignes de Merlot dans le Languedoc. Voici les conditions actuelles : - Stade phénologique : floraison (stade BBCH 61–69). - Humidité relative moyenne sur les dernières 24h : 85%. - Température moyenne sur les dernières 24h : 23°C. - Il n'a pas plu dans les dernières 24h. - Historique d'infection par l'oïdium : élevé (quatre années sur cinq avec des symptômes marqués). - Évapotranspiration potentielle (ETP) : 2 mm/jour.  Quel est le risque d'infection par l'oïdium dans ces conditions, et que devrais-je faire pour protéger mes vignes ?
+
+
+assistant
+Risque : élevé
+Recommandation : Traiter immédiatement avec un fongicide systémique (ex : myclobutanil) ou du soufre en ciblant les inflorescences. Renouveler le traitement 7 jours plus tard si l’humidité relative reste élevée (>80%) et les températures favorables (20–25°C).
+
+
+
+user
+Je suis viticulteur dans la Vallée du Rhône. Voici les données de ma parcelle ce matin : - Stade phénologique : floraison (stade critique). - Humidité relative moyenne sur les dernières 24h : 85%. - Température moyenne sur les dernières 24h : 23°C. - Il a plu dans les dernières 24h (une averse de 10 mm). - Historique d'infection par l'oïdium : élevé (infections fréquentes les années précédentes). - Évapotranspiration potentielle (ETP) : 5 mm/jour (jour ensoleillé et venteux après la pluie).  Évalue le risque d'oïdium pour mes vignes en floraison et donne-moi une recommandation précise, en tenant compte de l'effet de la pluie récente et de l'ETP élevée.
+
+
+assistant
+Risque : moyen
+Recommandation : Surveiller les inflorescences dès aujourd'hui et appliquer un traitement préventif à base de soufre dans les 24–48h si l’humidité relative nocturne persiste au-dessus de 70%. L'ETP élevée réduit le risque, mais la floraison et l’inoculum important justifient une vigilance accrue.

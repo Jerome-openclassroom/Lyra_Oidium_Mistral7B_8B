@@ -1,0 +1,191 @@
+================================================================================
+🧪 Cas de test : Faible 1 — Température trop élevée, pas de pluie, inoculum faible
+Input :
+Stade_phenologique: autre
+Humidité_relative: 60
+Température_moyenne: 28
+Pluie_24h: 0
+Inoculum: 0.2
+ETP: 5
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque: faible
+Recommandation: Aucune action requise. Conditions défavorables à l’infection par l’oïdium.
+
+================================================================================
+🧪 Cas de test : Faible 2 — Humidité relative <70%, inoculum faible
+Input :
+Stade_phenologique: jeunes_feuilles
+Humidité_relative: 65
+Température_moyenne: 22
+Pluie_24h: 0
+Inoculum: 0.3
+ETP: 4
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : faible
+Recommandation : Aucune action requise. Conditions défavorables à l’infection par l’oïdium.
+
+================================================================================
+🧪 Cas de test : Faible 3 — Température trop basse, humidité relative limite
+Input :
+Stade_phenologique: autre
+Humidité_relative: 70
+Température_moyenne: 10
+Pluie_24h: 0
+Inoculum: 0.2
+ETP: 3
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque: faible
+Recommandation: Aucune action requise. Conditions défavorables à l’infection par l’oïdium.
+
+================================================================================
+🧪 Cas de test : Faible 4 — ETP élevée après pluie, humidité relative modérée
+Input :
+Stade_phenologique: autre
+Humidité_relative: 75
+Température_moyenne: 20
+Pluie_24h: 1
+Inoculum: 0.4
+ETP: 5
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : moyen
+Recommandation : Surveiller les jeunes feuilles. Envisager un traitement au soufre si l’humidité relative élevée persiste (≥6h).
+
+================================================================================
+🧪 Cas de test : Moyen 1 — Humidité relative et température modérées, inoculum moyen
+Input :
+Stade_phenologique: jeunes_feuilles
+Humidité_relative: 75
+Température_moyenne: 22
+Pluie_24h: 0
+Inoculum: 0.5
+ETP: 3
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : moyen
+Recommandation : Surveiller les jeunes feuilles. Envisager un traitement au soufre si l’humidité relative persiste élevée (≥6h).
+
+================================================================================
+🧪 Cas de test : Moyen 2 — Floraison avec humidité relative modérée, inoculum faible
+Input :
+Stade_phenologique: floraison
+Humidité_relative: 78
+Température_moyenne: 21
+Pluie_24h: 0
+Inoculum: 0.4
+ETP: 3
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : moyen
+Recommandation : Surveiller les inflorescences. Appliquer un traitement au soufre si l’humidité relative nocturne (≥6h) dépasse 70–80%.
+
+================================================================================
+🧪 Cas de test : Moyen 3 — Humidité relative élevée mais ETP élevée après pluie
+Input :
+Stade_phenologique: jeunes_feuilles
+Humidité_relative: 80
+Température_moyenne: 23
+Pluie_24h: 1
+Inoculum: 0.6
+ETP: 5
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : élevé
+Recommandation : Traiter immédiatement avec un fongicide systémique. Cibler les jeunes feuilles et renouveler le traitement après 7–10 jours si conditions favorables persistent.
+
+================================================================================
+🧪 Cas de test : Moyen 4 — Inoculum moyen et conditions limites
+Input :
+Stade_phenologique: autre
+Humidité_relative: 75
+Température_moyenne: 18
+Pluie_24h: 0
+Inoculum: 0.5
+ETP: 2
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : moyen
+Recommandation : Surveiller les jeunes feuilles. Appliquer un traitement préventif à base de soufre si l’humidité relative nocturne dépasse 6–7 h (sur 24h).
+
+================================================================================
+🧪 Cas de test : Élevé 1 — Conditions optimales pour l'oïdium, floraison
+Input :
+Stade_phenologique: floraison
+Humidité_relative: 85
+Température_moyenne: 22
+Pluie_24h: 0
+Inoculum: 0.8
+ETP: 2
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : élevé
+Recommandation : Traiter immédiatement avec un fongicide systémique. Cibler les inflorescences et renouveler le traitement après 7–10 jours si conditions favorables persistent.
+
+================================================================================
+🧪 Cas de test : Élevé 2 — Humidité relative et inoculum élevés, jeunes feuilles
+Input :
+Stade_phenologique: jeunes_feuilles
+Humidité_relative: 85
+Température_moyenne: 23
+Pluie_24h: 0
+Inoculum: 0.8
+ETP: 2
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : élevé
+Recommandation : Traiter immédiatement au soufre. Cibler les jeunes feuilles et renouveler sous 7–10 jours si conditions favorables persistent.
+
+================================================================================
+🧪 Cas de test : Élevé 3 — Pluie récente et humidité relative élevée, floraison
+Input :
+Stade_phenologique: floraison
+Humidité_relative: 85
+Température_moyenne: 22
+Pluie_24h: 1
+Inoculum: 0.7
+ETP: 2
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : élevé
+Recommandation : Traiter immédiatement avec un fongicide systémique. Cibler les inflorescences et renouveler le traitement après 7–10 jours si conditions favorables persistent.
+
+================================================================================
+🧪 Cas de test : Élevé 4 — Tous les facteurs défavorables, floraison
+Input :
+Stade_phenologique: floraison
+Humidité_relative: 90
+Température_moyenne: 23
+Pluie_24h: 1
+Inoculum: 0.9
+ETP: 2
+
+Évalue le risque d'oïdium et propose une recommandation agronomique.
+
+Réponse du modèle :
+Risque : élevé
+Recommandation : Traiter immédiatement avec un fongicide systémique. Cibler les inflorescences et renouveler le traitement après 7–10 jours si conditions favorables persistent.
