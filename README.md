@@ -1,3 +1,12 @@
+<img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" width="100px" height="auto" />
+
+![Mistral](https://img.shields.io/badge/Model-Mistral%207B-blue)
+![LoRA](https://img.shields.io/badge/Fine--Tuning-LoRA-green)
+![SFT](https://img.shields.io/badge/Training-SFT-orange)
+![Agronomy](https://img.shields.io/badge/Domain-Agronomy%20%2F%20Viticulture-darkgreen)
+![HuggingFace](https://img.shields.io/badge/Platform-Hugging%20Face-yellow)
+![License](https://img.shields.io/badge/License-Apache%202.0-lightgrey)
+
 # Modèle de prévision du risque d’oïdium de la vigne (Mistral 7B / 8B)
 
 ## Présentation générale
@@ -143,6 +152,12 @@ Ce projet montre que la **qualité du cadrage et du dataset** est plus détermin
 ⚠️ Ce modèle est un **outil d’aide à la décision** et ne remplace pas une expertise humaine locale.
 
 ---
+
+## 🔗 Modèle Hugging Face
+
+Le modèle fine-tuné est disponible publiquement sur Hugging Face :
+
+👉 **https://huggingface.co/jeromex1/lyra_Oidium_mistral7B_LoRA**
 
 ## Licence et statut
 
